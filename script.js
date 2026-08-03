@@ -233,12 +233,15 @@ form.addEventListener('submit', (event) => {
     console.log(userData);
 
     successMsg.textContent = 'Registration successful!';
-
+                       
+                   //5sec for Registration successful! text
     setTimeout(() => {
     successMsg.textContent = '';
       }, 5000);
 
     form.reset();
+    document.getElementById('password-error').textContent = '';
+    document.getElementById('password-error').className = 'error';
 
     registerBtn.disabled = true;
 
