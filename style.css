@@ -1,53 +1,109 @@
-*{
+* {
     margin: 0px;
     box-sizing: border-box;
     padding: 0px;
 }
-body { 
-  height: 100vh; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  background: linear-gradient(180deg, #7c6ff0 0%, #6a86e8 35%, #4fb3d9 100%);
 
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #7c6ff0 0%, #6a86e8 35%, #4fb3d9 100%);
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 25%;
-    height: 65%;
-    background-color: #2e2c5e; 
-    gap:32px;
-    border-radius: 5px; 
-    box-shadow: 0 20px 40px rgba(20, 15, 60, 0.35); 
+    background-color: #2e2c5e;
+    gap: 10px;
+    padding: 0 0 16px;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(20, 15, 60, 0.35);
     overflow: hidden;
 }
-.form-sec{
+
+.form-sec {
     width: 100%;
-    height: 13%;
+    height: 50px;
     background-color: #262454;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 23px;
+    font-size: 20px;
+    margin-bottom: 4px;
 }
-.butnreg{
+
+.fname, .lname, .email, .password, .con-pass, .pho-num {
+    background-color: rgb(247, 247, 247);
+    padding: 12px 16px;
+    width: 80%;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.pass-wrapper {
+    position: relative;
+    width: 80%;
+}
+
+.pass-wrapper input {
+    width: 100%;
+}
+
+.pass-toggle {
+    position: absolute;
+    right: 14px;
+    top: 35%;
+    cursor: pointer;
+    font-size: 13px;
+    color: #555;
+}
+
+.pass-toggle:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #ff6b6b;
+    font-size: 12px;
+    width: 80%;
+    height: 14px;
+    line-height: 14px;
+}
+
+.error.weak { color: #fc3434; }
+.error.strong { color: #51fa62; }
+
+.valid { border: 2px solid #51fa62; }
+.invalid { border: 2px solid #fc3434; }
+
+.success-msg {
+    width: 80%;
+    color: #baffc9;
+    font-size: 14px;
+    text-align: center;
+    min-height: 16px;
+}
+
+.butnreg {
     padding: 5px 23px;
-    background-color: rgb(92, 184, 0); 
+    background-color: rgb(92, 184, 0);
     border: none;
     border-radius: 5px;
     color: white;
     cursor: pointer;
     font-size: 15px;
-    align-self: flex-end;   
-    margin-right: 10%; 
+    align-self: flex-end;
+    margin-right: 10%;
 }
-.fname, .lname, .email, .password{
-    background-color: rgb(247, 247, 247);
-    padding: 12px 16px;
-    width:80%;
-    border: none;
-    border-radius: 10px;
+
+.butnreg:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.6;
 }
